@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    outline: 0; border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+i{
+    color: white;
+    font-size: 1.2rem;
+    min-width: 4rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+a{
+    color: white;
+}
+
+header{
+    background-color: rgb(0, 52, 70);
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 15rem;
+    z-index: 1000;
+}
+
+header.close{
+    width: 4rem;
+}
+
+header li{
+    padding: 1rem 1rem 1rem 0;
+    white-space: nowrap;
+}
+
+header.close .menu .link_item{
+    display: none;
+} 
+
+header.close h1{
+    display: none;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem 1rem 0;
+}
+
+header .logo h1{
+    color: rgb(255, 255, 255);
+}
+
+header .submenu li:first-child{
+    padding-top: 2rem;
+}
+
+header .submenu li:nth-child(2){
+    padding-top: 2rem;
+}
+
+header .submenu li:last-child{
+    padding-bottom: 0;
+}
+
+header .submenu li{
+    padding: 1rem 1rem 1rem 4.3rem;
+}
+
+header ul.menu > li{
+    position: relative;
+}
+
+header .submenu.absolute{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: rgb(0, 52, 70);
+}
+
+header .submenu.absolute li{
+    padding: 1rem;
+}
+
+header .submenu .link_name{
+    display: none;
+}
+
+header .submenu.absolute .link_name{
+    display: block;
+}
+
+header .submenu.absolute.show{
+    display: block;
+}
+
+
+header .submenu{
+    display: none;
+}
+
+main{
+    width: calc(100vw - 15rem);
+    min-height: 100vh;
+    background-color: lightcoral;
+    position: relative;
+    left: 15rem;
+}
+
+main.show{
+    width: calc(100vw - 4rem);
+    left: 4rem;
+}
+
+.fa-bars{
+    padding-top: 1.25rem;
+    color: black;
+    font-size: 1.3rem;
+}
