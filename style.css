@@ -45,6 +45,18 @@ header li{
     white-space: nowrap;
 }
 
+header .submenu .link_name{
+    font-weight: bolder;
+}
+
+header .submenu .link_name{
+    display: none !important;
+}
+
+header.close .submenu .link_name{
+    display: inline-block !important;
+}
+
 header.close .menu .link_item{
     display: none;
 } 
@@ -90,6 +102,14 @@ header .submenu.absolute{
     background-color: rgb(0, 52, 70);
 }
 
+header .menu > li .submenu_link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
 header .submenu.absolute li{
     padding: 1rem;
 }
@@ -114,7 +134,7 @@ header .submenu{
 main{
     width: calc(100vw - 15rem);
     min-height: 100vh;
-    background-color: lightcoral;
+    background-color: rgb(255, 238, 238);
     position: relative;
     left: 15rem;
 }

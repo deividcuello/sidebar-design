@@ -13,7 +13,7 @@
     <header>
         <nav>
             <div class="logo">
-                <i class="fa-solid fa-computer"></i>
+                <i class="fa-solid fa-computer on"></i>
                 <h1>Loop.io</h1>
             </div>
             <ul class="menu">
@@ -28,9 +28,10 @@
                 <li>
                     <a href="#" class="submenu_link">
                         <div class="icon-container">
-                            <i class="fa-solid fa-house"></i>
+                            <i class="fa-solid fa-chalkboard-user"></i>
                             <span class="link_item">Courses</span>
                         </div>
+                        <i class="fa-solid fa-angle-down"></i>
                     </a>
                     <ul class="submenu show">
                         <li class="link_name"><a href="#">Courses</a></li>
@@ -43,9 +44,10 @@
                 <li>
                     <a href="#" class="submenu_link">
                         <div class="icon-container">
-                            <i class="fa-solid fa-house"></i>
+                            <i class="fa-solid fa-square-rss"></i>
                             <span class="link_item">Blog</span>
                         </div>
+                        <i class="fa-solid fa-angle-down"></i>
                     </a>
                     <ul class="submenu show">
                         <li class="link_name"><a href="#">Blog</a></li>
@@ -56,7 +58,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa-solid fa-house"></i>
+                        <i class="fa-solid fa-right-to-bracket"></i>
                         <span class="link_item">Sign in</span>
                     </a>
                 </li>
@@ -65,37 +67,11 @@
     </header>
 
     <main>
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars on"></i>
     </main>
 
     <script src="https://kit.fontawesome.com/0e43870383.js" crossorigin="anonymous"></script>
 
-    <script>
-        const submenu = document.querySelectorAll('.submenu_link'),
-        menuBtn = document.querySelector('.fa-bars'),
-        main = document.querySelector('main'),
-        header = document.querySelector('header')
-
-        console.log(menuBtn)
-        submenu.forEach(element => {      
-            element.firstElementChild.addEventListener('click', () => {
-                if(document.querySelector('header .menu .absolute') == element.nextElementSibling){
-                    document.querySelector('header .menu .absolute').classList.remove('absolute')
-                    return
-                }
-                if(submenu[0].nextElementSibling.classList.contains('absolute') || submenu[1].nextElementSibling.classList.contains('absolute')){
-                    document.querySelector('header .menu .absolute').classList.remove('absolute')
-                }
-                
-                element.nextElementSibling.classList.toggle('absolute')
-            })
-        });
-
-        menuBtn.addEventListener('click', () => {
-            main.classList.toggle('show')
-            header.classList.toggle('close')
-        })
-    </script>
-
+    <script src="./script.js"></script>
 </body>
 </html>
