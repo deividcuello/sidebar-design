@@ -19,11 +19,15 @@ submenu.forEach(element => {
         if(menuBtn.classList.contains('on')){
             absolute = document.querySelector('header .menu .absolute')
             absolute.style.position = 'static'
-            document.querySelector('header .submenu').style.paddingLeft = '3.4rem'
+            document.querySelectorAll('header .submenu').forEach(element => {
+                element.style.paddingLeft = '3.4rem'
+            });
         } else{
             absolute = document.querySelector('header .menu .absolute')
             absolute.style.position = 'absolute'
-            document.querySelector('header .submenu').style.padding = 0
+            document.querySelectorAll('header .submenu').forEach(element => {
+                element.style.paddingLeft = '0'
+            });
         }
 
     })
