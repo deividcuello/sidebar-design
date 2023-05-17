@@ -6,20 +6,23 @@ header = document.querySelector('header')
 
 submenu.forEach(element => {      
     element.addEventListener('click', () => {
-        if(document.querySelector('header .menu .absolute') == element.nextElementSibling){
-            document.querySelector('header .menu .absolute').classList.remove('absolute')
+        let absolute = document.querySelector('header .menu .absolute')
+        if(absolute == element.nextElementSibling){
+            absolute.classList.remove('absolute')
             return
         }
         if(submenu[0].nextElementSibling.classList.contains('absolute') || submenu[1].nextElementSibling.classList.contains('absolute')){
-            document.querySelector('header .menu .absolute').classList.remove('absolute')
+            absolute.classList.remove('absolute')
         }
         
         element.nextElementSibling.classList.toggle('absolute')
         if(menuBtn.classList.contains('on')){
-            document.querySelector('header .menu .absolute').style.position = 'static'
+            absolute = document.querySelector('header .menu .absolute')
+            absolute.style.position = 'static'
             document.querySelector('header .submenu').style.paddingLeft = '3.4rem'
         } else{
-            document.querySelector('header .menu .absolute').style.position = 'absolute'
+            absolute = document.querySelector('header .menu .absolute')
+            absolute.style.position = 'absolute'
             document.querySelector('header .submenu').style.padding = 0
         }
 
@@ -28,11 +31,12 @@ submenu.forEach(element => {
 });
 
 menuBtn.addEventListener('click', () => {
+    const absolute = document.querySelector('header .menu .absolute')
     main.classList.toggle('show')
     header.classList.toggle('close')
     menuBtn.classList.toggle('on')
-    if(document.querySelector('header .menu .absolute') != null){
-        document.querySelector('header .menu .absolute').classList.remove('absolute')
+    if(absolute != null){
+        absolute.classList.remove('absolute')
     }
     if(!menuBtn.classList.contains('on')){
         document.querySelectorAll('.fa-angle-down').forEach(element => {
